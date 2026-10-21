@@ -17,16 +17,17 @@ import ProjectCard from '../components/ProjectCard.astro';
         <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="LinkedIn de Avanilson Santos">LinkedIn</a>
       </div>
       <div class="hero-stack">
-        <div class="stack-bubble"><img src="/icons/react.svg" alt="React" /></div>
-        <div class="stack-bubble"><img src="/icons/nextjs.svg" alt="Next.js" /></div>
-        <div class="stack-bubble"><img src="/icons/javascript.svg" alt="JavaScript" /></div>
-        <div class="stack-bubble"><img src="/icons/typescript.svg" alt="TypeScript" /></div>
-        <div class="stack-bubble"><img src="/icons/tailwind.svg" alt="Tailwind CSS" /></div>
-        <div class="stack-bubble"><img src="/icons/nodejs.svg" alt="Node.js" /></div>
-        <div class="stack-bubble"><img src="/icons/supabase.svg" alt="Supabase" /></div>
-        <div class="stack-bubble"><img src="/icons/express.svg" alt="Express.js" /></div>
-        <div class="stack-bubble"><img src="/icons/nestjs.svg" alt="NestJS" /></div>
-        <div class="stack-bubble"><img src="/icons/styledcomponents.svg" alt="Styled Components" /></div>
+        <div class="stack-bubble" data-tooltip="React"><img src="/icons/react.svg" alt="React" /></div>
+        <div class="stack-bubble" data-tooltip="Next.js"><img src="/icons/nextjs.svg" alt="Next.js" /></div>
+        <div class="stack-bubble" data-tooltip="JavaScript"><img src="/icons/javascript.svg" alt="JavaScript" /></div>
+        <div class="stack-bubble" data-tooltip="TypeScript"><img src="/icons/typescript.svg" alt="TypeScript" /></div>
+        <div class="stack-bubble" data-tooltip="Tailwind CSS"><img src="/icons/tailwind.svg" alt="Tailwind CSS" /></div>
+        <div class="stack-bubble" data-tooltip="Node.js"><img src="/icons/nodejs.svg" alt="Node.js" /></div>
+        <div class="stack-bubble" data-tooltip="Supabase"><img src="/icons/supabase.svg" alt="Supabase" /></div>
+        <div class="stack-bubble" data-tooltip="Express.js"><img src="/icons/express.svg" alt="Express.js" /></div>
+        <div class="stack-bubble" data-tooltip="NestJS"><img src="/icons/nestjs.svg" alt="NestJS" /></div>
+        <div class="stack-bubble" data-tooltip="Styled Components"><img src="/icons/styledcomponents.svg" alt="Styled Components" /></div>
+        <div class="stack-bubble" data-tooltip="Vercel"><img src="/icons/vercel.svg" alt="Vercel" /></div>
       </div>
     </section>
 
@@ -91,11 +92,45 @@ import ProjectCard from '../components/ProjectCard.astro';
   }
 
   .stack-bubble {
+    position: relative;
+  }
+
+  .stack-bubble[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #18181b;
+    color: #fff;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    padding: 3px 8px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+
+  .stack-bubble[data-tooltip]:hover::after {
+    opacity: 1;
+  }
+
+  /* original */
+  .stack-bubble {
     @apply w-12 h-12 rounded-2xl border border-zinc-200 bg-zinc-100 flex items-center justify-center p-2 transition-transform hover:scale-110;
   }
 
   :global(.dark) .stack-bubble {
     @apply border-zinc-700 bg-zinc-800;
+  }
+
+  .stack-more {
+    @apply w-12 h-12 rounded-2xl border border-zinc-200 bg-zinc-100 flex items-center justify-center text-sm text-zinc-500 font-medium cursor-default;
+  }
+
+  :global(.dark) .stack-more {
+    @apply border-zinc-700 bg-zinc-800 text-zinc-400;
   }
 
   .stack-bubble img {
