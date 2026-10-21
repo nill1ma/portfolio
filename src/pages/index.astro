@@ -16,6 +16,18 @@ import ProjectCard from '../components/ProjectCard.astro';
         <a href="https://github.com/nill1ma" target="_blank" class="hero-link">GitHub</a>
         <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" class="hero-link">LinkedIn</a>
       </div>
+      <div class="hero-stack">
+        <div class="stack-bubble"><img src="/icons/react.svg" alt="React" /></div>
+        <div class="stack-bubble"><img src="/icons/nextjs.svg" alt="Next.js" /></div>
+        <div class="stack-bubble"><img src="/icons/javascript.svg" alt="JavaScript" /></div>
+        <div class="stack-bubble"><img src="/icons/typescript.svg" alt="TypeScript" /></div>
+        <div class="stack-bubble"><img src="/icons/tailwind.svg" alt="Tailwind CSS" /></div>
+        <div class="stack-bubble"><img src="/icons/nodejs.svg" alt="Node.js" /></div>
+        <div class="stack-bubble"><img src="/icons/supabase.svg" alt="Supabase" /></div>
+        <div class="stack-bubble"><img src="/icons/express.svg" alt="Express.js" /></div>
+        <div class="stack-bubble"><img src="/icons/nestjs.svg" alt="NestJS" /></div>
+        <div class="stack-bubble"><img src="/icons/styledcomponents.svg" alt="Styled Components" /></div>
+      </div>
     </section>
 
     <section id="sobre" class="section">
@@ -42,15 +54,11 @@ import ProjectCard from '../components/ProjectCard.astro';
           image="/images/awake-ui.jpg"
           description="Biblioteca de componentes UI para React, inspirada no Material UI, para uso em projetos pessoais e profissionais."
           i18nKey="projects.awakeui.description"
-          stack={["React", "TypeScript", "Styled Components"]}
+          stack={["React", "TypeScript", "Tailwind CSS"]}
           githubUrl="https://github.com/nill1ma/awake-ui"
           liveUrl="https://awake-ui.vercel.app"
         />
       </div>
-    </section>
-
-    <section id="contato" class="section">
-      <h2 class="section-title" data-i18n="contact.title">Contato</h2>
     </section>
   </main>
 </Layout>
@@ -64,6 +72,78 @@ import ProjectCard from '../components/ProjectCard.astro';
 
   .hero {
     @apply min-h-screen flex flex-col justify-center;
+  }
+
+  .hero-content {
+    @apply flex flex-col gap-8 lg:flex-row lg:items-stretch lg:justify-between mb-16;
+  }
+
+  .hero-text {
+    @apply flex-shrink-0 flex flex-col justify-center;
+  }
+
+  .hero-terminal {
+    @apply w-full lg:w-96 rounded-xl overflow-hidden border border-zinc-200 bg-zinc-950 text-sm font-mono;
+  }
+
+  :global(.dark) .hero-terminal {
+    @apply border-zinc-800;
+  }
+
+  .terminal-bar {
+    @apply flex gap-2 px-4 py-3 bg-zinc-900 border-b border-zinc-800;
+  }
+
+  .terminal-dot {
+    @apply w-3 h-3 rounded-full;
+  }
+
+  .terminal-dot--red { @apply bg-red-500; }
+  .terminal-dot--yellow { @apply bg-yellow-500; }
+  .terminal-dot--green { @apply bg-green-500; }
+
+  .terminal-code {
+    @apply p-5 m-0 overflow-x-auto leading-relaxed;
+  }
+
+  .terminal-code code {
+    @apply text-zinc-300;
+  }
+
+  .t-keyword { @apply text-purple-400; }
+  .t-var { @apply text-blue-400; }
+  .t-key { @apply text-sky-300; }
+  .t-string { @apply text-green-400; }
+
+
+
+  .hero-stack {
+    @apply flex flex-wrap gap-3 mt-10 items-end;
+  }
+
+  .stack-bubble {
+    @apply w-12 h-12 rounded-2xl border border-zinc-200 bg-zinc-100 flex items-center justify-center p-2 transition-transform hover:scale-110;
+  }
+
+  :global(.dark) .stack-bubble {
+    @apply border-zinc-700 bg-zinc-800;
+  }
+
+  .stack-bubble img {
+    @apply w-full h-full object-contain;
+  }
+
+  /* placeholder .hero-stack original */
+  ._hero-stack-orig {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .stack-badge {
+    @apply px-3 py-1 text-xs rounded-full border border-zinc-300 text-zinc-600;
+  }
+
+  :global(.dark) .stack-badge {
+    @apply border-zinc-700 text-zinc-400;
   }
 
   .hero-greeting {
