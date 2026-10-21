@@ -55,12 +55,10 @@
   function applyLanguage(lang: Language) {
     const t = translations[lang];
 
-    // Atualiza botões ativos
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('lang-btn--active', btn.getAttribute('data-lang') === lang);
     });
 
-    // Atualiza textos via data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n')!;
       const value = key.split('.').reduce((obj: any, k) => obj?.[k], t);
@@ -72,7 +70,61 @@
 <style>
   @reference "../styles/global.css";
 
-  /* estilos existentes... */
+  .header {
+    @apply fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-zinc-100;
+  }
+
+  :global(.dark) .header {
+    @apply bg-zinc-900/80 border-zinc-800;
+  }
+
+  .header-inner {
+    @apply max-w-4xl mx-auto px-6 h-14 flex items-center justify-between;
+  }
+
+  .header-name {
+    @apply text-sm font-semibold text-zinc-900;
+  }
+
+  :global(.dark) .header-name {
+    @apply text-white;
+  }
+
+  .nav {
+    @apply flex items-center gap-6;
+  }
+
+  .nav-link {
+    @apply text-sm text-zinc-600 no-underline transition-colors hover:text-zinc-900;
+  }
+
+  :global(.dark) .nav-link {
+    @apply text-zinc-400 hover:text-white;
+  }
+
+  .theme-btn {
+    @apply bg-transparent border-0 cursor-pointer p-1 text-zinc-600 transition-colors hover:text-zinc-900 flex items-center;
+  }
+
+  :global(.dark) .theme-btn {
+    @apply text-zinc-400 hover:text-white;
+  }
+
+  .icon-sun {
+    @apply block;
+  }
+
+  .icon-moon {
+    @apply hidden;
+  }
+
+  :global(.dark) .icon-sun {
+    @apply hidden;
+  }
+
+  :global(.dark) .icon-moon {
+    @apply block;
+  }
 
   .lang-switcher {
     @apply flex items-center gap-1;
