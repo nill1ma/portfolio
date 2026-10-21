@@ -1,18 +1,126 @@
 ---
-import '../styles/global.css'
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Portfólio</title>
-    <script is:inline>
-      const theme = localStorage.getItem('theme') ?? 'dark';
-      document.documentElement.classList.toggle('dark', theme === 'dark');
-    </script>
-  </head>
-  <body class="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white">
-    <slot />
-  </body>
-</html>
+<Layout>
+  <Header />
+
+  <main class="main">
+    <section id="hero" class="hero">
+      <p class="hero-greeting" data-i18n="hero.greeting">Olá, meu nome é</p>
+      <h1 class="hero-name">Avanilson Santos</h1>
+      <p class="hero-role" data-i18n="hero.role">Senior Frontend Developer</p>
+      <div class="hero-links">
+        <a href="https://github.com/nill1ma" target="_blank" class="hero-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" class="hero-link">LinkedIn</a>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <h2 class="section-title" data-i18n="about.title">Sobre</h2>
+      <p class="section-text" data-i18n="about.text">
+        Desenvolvedor Frontend Sênior com mais de 10 anos de experiência construindo interfaces modernas com React, Next.js e TypeScript. Apaixonado por performance, acessibilidade e boas práticas de desenvolvimento.
+      </p>
+    </section>
+
+    <section id="projetos" class="section">
+      <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+      <div class="projects-grid">
+        <ProjectCard
+          name="monthctrl-web"
+          i18nKey="projects.monthctrl.description"
+          description="Gerenciador de tarefas mensais com foco em produtividade e organização pessoal."
+          stack={["Next.js", "TypeScript", "Tailwind CSS"]}
+          githubUrl="https://github.com/nill1ma/monthctrl-web"
+          liveUrl="https://monthctrl-app.vercel.app/login"
+        />
+        <ProjectCard
+          name="awake-ui"
+          i18nKey="projects.awakeui.description"
+          description="Biblioteca de componentes UI para React, inspirada no Material UI, para uso em projetos pessoais e profissionais."
+          stack={["React", "TypeScript", "Styled Components"]}
+          githubUrl="https://github.com/nill1ma/awake-ui"
+          liveUrl="https://awake-ui.vercel.app"
+        />
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <h2 class="section-title" data-i18n="contact.title">Contato</h2>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  @reference "../styles/global.css";
+
+  .main {
+    @apply max-w-4xl mx-auto px-6 pt-24;
+  }
+
+  .hero {
+    @apply min-h-screen flex flex-col justify-center;
+  }
+
+  .hero-greeting {
+    @apply text-zinc-500 mb-2;
+  }
+
+  :global(.dark) .hero-greeting {
+    @apply text-zinc-400;
+  }
+
+  .hero-name {
+    @apply text-5xl font-bold text-zinc-900 mb-4;
+  }
+
+  :global(.dark) .hero-name {
+    @apply text-white;
+  }
+
+  .hero-role {
+    @apply text-xl text-zinc-600 mb-8;
+  }
+
+  :global(.dark) .hero-role {
+    @apply text-zinc-400;
+  }
+
+  .hero-links {
+    @apply flex gap-4;
+  }
+
+  .hero-link {
+    @apply text-sm text-zinc-600 no-underline transition-colors hover:text-zinc-900;
+  }
+
+  :global(.dark) .hero-link {
+    @apply text-zinc-400 hover:text-white;
+  }
+
+  .section {
+    @apply py-16;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-zinc-900 mb-6;
+  }
+
+  :global(.dark) .section-title {
+    @apply text-white;
+  }
+
+  .section-text {
+    @apply text-zinc-600 leading-relaxed max-w-2xl;
+  }
+
+  :global(.dark) .section-text {
+    @apply text-zinc-400;
+  }
+
+  .projects-grid {
+    @apply grid gap-4 sm:grid-cols-2;
+  }
+</style>
