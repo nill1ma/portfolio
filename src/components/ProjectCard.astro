@@ -6,28 +6,37 @@ interface Props {
   githubUrl?: string;
   liveUrl?: string;
   i18nKey?: string;
+  image?: string;
 }
 
-const { name, description, stack, githubUrl, liveUrl, i18nKey } = Astro.props;
+const { name, description, stack, githubUrl, liveUrl, i18nKey, image } = Astro.props;
 ---
 
 <div class="card">
-  <h3 class="card-title">{name}</h3>
-  <p class="card-description" data-i18n={i18nKey}>{description}</p>
+  {image && (
+    <div class="card-image-wrap">
+      <img src={image} alt={name} class="card-image" loading="lazy" />
+    </div>
+  )}
 
-  <div class="card-stack">
-    {stack.map(tech => (
-      <span class="card-badge">{tech}</span>
-    ))}
-  </div>
+  <div class="card-body">
+    <h3 class="card-title">{name}</h3>
+    <p class="card-description" data-i18n={i18nKey}>{description}</p>
 
-  <div class="card-links">
-    {githubUrl && (
-      <a href={githubUrl} target="_blank" class="card-link">GitHub →</a>
-    )}
-    {liveUrl && (
-      <a href={liveUrl} target="_blank" class="card-link">Ver projeto →</a>
-    )}
+    <div class="card-stack">
+      {stack.map(tech => (
+        <span class="card-badge">{tech}</span>
+      ))}
+    </div>
+
+    <div class="card-links">
+      {githubUrl && (
+        <a href={githubUrl} target="_blank" class="card-link">GitHub →</a>
+      )}
+      {liveUrl && (
+        <a href={liveUrl} target="_blank" class="card-link">Ver projeto →</a>
+      )}
+    </div>
   </div>
 </div>
 
@@ -35,11 +44,31 @@ const { name, description, stack, githubUrl, liveUrl, i18nKey } = Astro.props;
   @reference "../styles/global.css";
 
   .card {
-    @apply border border-zinc-200 rounded-lg p-6 transition-colors hover:border-zinc-400;
+    @apply border border-zinc-200 rounded-xl overflow-hidden transition-all hover:border-zinc-400 hover:shadow-lg;
   }
 
   :global(.dark) .card {
-    @apply border-zinc-800 hover:border-zinc-600;
+    @apply border-zinc-800 hover:border-zinc-600 hover:shadow-zinc-900/50;
+  }
+
+  .card-image-wrap {
+    @apply w-full h-44 overflow-hidden bg-zinc-100;
+  }
+
+  :global(.dark) .card-image-wrap {
+    @apply bg-zinc-800;
+  }
+
+  .card-image {
+    @apply w-full h-full object-cover object-top transition-transform duration-500;
+  }
+
+  .card:hover .card-image {
+    @apply scale-105;
+  }
+
+  .card-body {
+    @apply p-6;
   }
 
   .card-title {
