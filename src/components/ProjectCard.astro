@@ -5,9 +5,10 @@ interface Props {
   stack: string[];
   githubUrl?: string;
   liveUrl?: string;
+  i18nKey?: string;
 }
 
-const { name, description, stack, githubUrl, liveUrl } = Astro.props;
+const { name, description, stack, githubUrl, liveUrl, i18nKey } = Astro.props;
 ---
 
 <div class="card">
