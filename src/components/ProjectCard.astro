@@ -31,10 +31,10 @@ const { name, description, stack, githubUrl, liveUrl, i18nKey, image } = Astro.p
 
     <div class="card-links">
       {githubUrl && (
-        <a href={githubUrl} target="_blank" class="card-link">GitHub →</a>
+        <a href={githubUrl} target="_blank" rel="noopener noreferrer" class="card-link" aria-label={`Ver código do ${name} no GitHub`}>GitHub →</a>
       )}
       {liveUrl && (
-        <a href={liveUrl} target="_blank" class="card-link">Ver projeto →</a>
+        <a href={liveUrl} target="_blank" rel="noopener noreferrer" class="card-link" aria-label={`Ver ${name} ao vivo`}>Ver projeto →</a>
       )}
     </div>
   </div>

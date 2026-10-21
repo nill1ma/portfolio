@@ -13,8 +13,8 @@ import ProjectCard from '../components/ProjectCard.astro';
       <h1 class="hero-name">Avanilson Santos</h1>
       <p class="hero-role" data-i18n="hero.role">Senior Frontend Developer</p>
       <div class="hero-links">
-        <a href="https://github.com/nill1ma" target="_blank" class="hero-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" class="hero-link">LinkedIn</a>
+        <a href="https://github.com/nill1ma" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="GitHub de Avanilson Santos">GitHub</a>
+        <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="LinkedIn de Avanilson Santos">LinkedIn</a>
       </div>
       <div class="hero-stack">
         <div class="stack-bubble"><img src="/icons/react.svg" alt="React" /></div>
@@ -74,46 +74,15 @@ import ProjectCard from '../components/ProjectCard.astro';
     @apply min-h-screen flex flex-col justify-center;
   }
 
-  .hero-content {
-    @apply flex flex-col gap-8 lg:flex-row lg:items-stretch lg:justify-between mb-16;
-  }
 
-  .hero-text {
-    @apply flex-shrink-0 flex flex-col justify-center;
-  }
 
-  .hero-terminal {
-    @apply w-full lg:w-96 rounded-xl overflow-hidden border border-zinc-200 bg-zinc-950 text-sm font-mono;
-  }
 
-  :global(.dark) .hero-terminal {
-    @apply border-zinc-800;
-  }
 
-  .terminal-bar {
-    @apply flex gap-2 px-4 py-3 bg-zinc-900 border-b border-zinc-800;
-  }
 
-  .terminal-dot {
-    @apply w-3 h-3 rounded-full;
-  }
 
-  .terminal-dot--red { @apply bg-red-500; }
-  .terminal-dot--yellow { @apply bg-yellow-500; }
-  .terminal-dot--green { @apply bg-green-500; }
 
-  .terminal-code {
-    @apply p-5 m-0 overflow-x-auto leading-relaxed;
-  }
 
-  .terminal-code code {
-    @apply text-zinc-300;
-  }
 
-  .t-keyword { @apply text-purple-400; }
-  .t-var { @apply text-blue-400; }
-  .t-key { @apply text-sky-300; }
-  .t-string { @apply text-green-400; }
 
 
 
@@ -133,18 +102,7 @@ import ProjectCard from '../components/ProjectCard.astro';
     @apply w-full h-full object-contain;
   }
 
-  /* placeholder .hero-stack original */
-  ._hero-stack-orig {
-    @apply flex flex-wrap gap-2;
-  }
 
-  .stack-badge {
-    @apply px-3 py-1 text-xs rounded-full border border-zinc-300 text-zinc-600;
-  }
-
-  :global(.dark) .stack-badge {
-    @apply border-zinc-700 text-zinc-400;
-  }
 
   .hero-greeting {
     @apply text-zinc-500 mb-2;
@@ -175,11 +133,11 @@ import ProjectCard from '../components/ProjectCard.astro';
   }
 
   .hero-link {
-    @apply text-sm text-zinc-600 no-underline transition-colors hover:text-zinc-900;
+    @apply text-sm text-zinc-700 no-underline border border-zinc-300 rounded-full px-4 py-2 transition-all hover:border-zinc-900 hover:text-zinc-900;
   }
 
   :global(.dark) .hero-link {
-    @apply text-zinc-400 hover:text-white;
+    @apply text-zinc-300 border-zinc-600 hover:border-white hover:text-white;
   }
 
   .section {
