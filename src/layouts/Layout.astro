@@ -7,7 +7,10 @@ import '../styles/global.css'
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Portfólio</title>
+    <title>Avanilson Santos — Senior Frontend Developer</title>
+    <meta name="description" content="Portfolio de Avanilson Santos, Senior Frontend Developer especializado em React, Next.js e PWA." />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#18181b" />
     <script is:inline>
       const theme = localStorage.getItem('theme') ?? 'dark';
       document.documentElement.classList.toggle('dark', theme === 'dark');
@@ -15,5 +18,12 @@ import '../styles/global.css'
   </head>
   <body class="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white">
     <slot />
-  </body>
+    <script is:inline>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {})
+      })
+    }
+  </script>
+</body>
 </html>

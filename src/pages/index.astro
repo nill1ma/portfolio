@@ -35,6 +35,18 @@ import ProjectCard from '../components/ProjectCard.astro';
           <div class="stack-bubble" data-tooltip="PWA"><img src="/icons/pwa.svg" alt="PWA" /></div>
         </div>
       </div>
+      <div class="hero-icons-row">
+        <div class="stack-bubble-sm"><img src="/icons/react.svg" alt="React" /></div>
+        <div class="stack-bubble-sm"><img src="/icons/nextjs.svg" alt="Next.js" /></div>
+        <div class="stack-bubble-sm"><img src="/icons/typescript.svg" alt="TypeScript" /></div>
+        <div class="stack-bubble-sm"><img src="/icons/javascript.svg" alt="JavaScript" /></div>
+        <div class="stack-bubble-sm"><img src="/icons/tailwind.svg" alt="Tailwind CSS" /></div>
+        <div class="stack-bubble-sm"><img src="/icons/nodejs.svg" alt="Node.js" /></div>
+        <div class="stack-bubble-sm"><img src="/icons/supabase.svg" alt="Supabase" /></div>
+        <div class="stack-bubble-sm"><img src="/icons/nestjs.svg" alt="NestJS" /></div>
+        <div class="stack-bubble-sm"><img src="/icons/vercel.svg" alt="Vercel" /></div>
+        <div class="stack-bubble-sm"><img src="/icons/pwa.svg" alt="PWA" /></div>
+      </div>
       <a href="#sobre" class="hero-scroll" aria-label="Rolar para o conteúdo">
         <span>scroll</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
@@ -207,6 +219,8 @@ import ProjectCard from '../components/ProjectCard.astro';
 
   .hero-link {
     @apply text-sm text-zinc-700 no-underline border border-zinc-300 rounded-full px-4 py-2 transition-all hover:border-zinc-900 hover:text-zinc-900;
+    min-width: 100px;
+    text-align: center;
   }
 
   :global(.dark) .hero-link {
@@ -303,8 +317,38 @@ import ProjectCard from '../components/ProjectCard.astro';
   .hero-icons-grid .stack-bubble:nth-child(11) { left: 19px;  top: 56px;  }
   .hero-icons-grid .stack-bubble:nth-child(12) { left: 56px;  top: 19px;  }
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     .hero-right { display: none; }
-    .hero { flex-direction: column; align-items: flex-start; }
+    .hero-icons-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
+    .hero-icons-row .stack-bubble-sm { display: flex; }
+    .hero { flex-direction: column; align-items: center; text-align: center; padding-top: 4rem; min-height: auto; padding-bottom: 2rem; }
+    .hero-left { align-items: center; }
+    .hero-bio { text-align: center; max-width: 100%; }
+    .hero-links { justify-content: center; }
+    .hero-name { font-size: 2.5rem; line-height: 1.2; }
+    .hero-bio { max-width: 100%; }
+    .hero-links { flex-wrap: wrap; }
+    .hero-scroll { display: none; }
+    .main { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .projects-grid { grid-template-columns: 1fr; }
   }
+
+  /* Ícones em linha — só mobile */
+  @media (min-width: 769px) {
+    .hero-icons-row { display: none; }
+  }
+
+  .stack-bubble-sm {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f4f4f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  :global(.dark) .stack-bubble-sm { background: #27272a; }
+  .stack-bubble-sm img { width: 24px; height: 24px; object-fit: contain; }
 </style>
