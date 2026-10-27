@@ -32,7 +32,7 @@ import ProjectCard from '../components/ProjectCard.astro';
           <div class="stack-bubble" data-tooltip="NestJS"><img src="/icons/nestjs.svg" alt="NestJS" /></div>
           <div class="stack-bubble" data-tooltip="Styled Components"><img src="/icons/styledcomponents.svg" alt="Styled Components" /></div>
           <div class="stack-bubble" data-tooltip="Vercel"><img src="/icons/vercel.svg" alt="Vercel" /></div>
-        <div class="stack-bubble" data-tooltip="PWA"><img src="/icons/pwa.svg" alt="PWA" /></div>
+          <div class="stack-bubble" data-tooltip="PWA"><img src="/icons/pwa.svg" alt="PWA" /></div>
         </div>
       </div>
       <a href="#sobre" class="hero-scroll" aria-label="Rolar para o conteúdo">
@@ -99,6 +99,10 @@ import ProjectCard from '../components/ProjectCard.astro';
     });
   });
 </script>
+
+
+
+
 
 </Layout>
 
@@ -175,18 +179,6 @@ import ProjectCard from '../components/ProjectCard.astro';
 
   .hero-name {
     @apply text-5xl font-bold text-zinc-900 mb-4;
-    position: relative;
-    display: inline-block;
-  }
-
-  .hero-name::before {
-    content: '';
-    position: absolute;
-    inset: -40px -80px;
-    background: radial-gradient(ellipse at center, rgba(139,92,246,0.25) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: -1;
-    border-radius: 50%;
   }
 
   :global(.dark) .hero-name {
@@ -281,32 +273,35 @@ import ProjectCard from '../components/ProjectCard.astro';
 
   .hero-right {
     position: relative;
-    width: 260px;
-    height: 260px;
+    width: 308px;
+    height: 308px;
+    overflow: visible;
+    flex-shrink: 0;
   }
 
   .hero-icons-grid {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 308px;
+    height: 308px;
   }
 
   .hero-icons-grid .stack-bubble {
     position: absolute;
   }
 
-  .hero-icons-grid .stack-bubble:nth-child(1) { left: 106px; top: 6px; }
-  .hero-icons-grid .stack-bubble:nth-child(2) { left: 156px; top: 19px; }
-  .hero-icons-grid .stack-bubble:nth-child(3) { left: 193px; top: 56px; }
-  .hero-icons-grid .stack-bubble:nth-child(4) { left: 206px; top: 106px; }
-  .hero-icons-grid .stack-bubble:nth-child(5) { left: 193px; top: 156px; }
-  .hero-icons-grid .stack-bubble:nth-child(6) { left: 156px; top: 193px; }
-  .hero-icons-grid .stack-bubble:nth-child(7) { left: 106px; top: 206px; }
-  .hero-icons-grid .stack-bubble:nth-child(8) { left: 56px; top: 193px; }
-  .hero-icons-grid .stack-bubble:nth-child(9) { left: 19px; top: 156px; }
-  .hero-icons-grid .stack-bubble:nth-child(10) { left: 6px; top: 106px; }
-  .hero-icons-grid .stack-bubble:nth-child(11) { left: 19px; top: 56px; }
-  .hero-icons-grid .stack-bubble:nth-child(12) { left: 56px; top: 19px; }
+
+  .hero-icons-grid .stack-bubble:nth-child(1)  { left: 106px; top: 6px;   }
+  .hero-icons-grid .stack-bubble:nth-child(2)  { left: 156px; top: 19px;  }
+  .hero-icons-grid .stack-bubble:nth-child(3)  { left: 193px; top: 56px;  }
+  .hero-icons-grid .stack-bubble:nth-child(4)  { left: 206px; top: 106px; }
+  .hero-icons-grid .stack-bubble:nth-child(5)  { left: 193px; top: 156px; }
+  .hero-icons-grid .stack-bubble:nth-child(6)  { left: 156px; top: 193px; }
+  .hero-icons-grid .stack-bubble:nth-child(7)  { left: 106px; top: 206px; }
+  .hero-icons-grid .stack-bubble:nth-child(8)  { left: 56px;  top: 193px; }
+  .hero-icons-grid .stack-bubble:nth-child(9)  { left: 19px;  top: 156px; }
+  .hero-icons-grid .stack-bubble:nth-child(10) { left: 6px;   top: 106px; }
+  .hero-icons-grid .stack-bubble:nth-child(11) { left: 19px;  top: 56px;  }
+  .hero-icons-grid .stack-bubble:nth-child(12) { left: 56px;  top: 19px;  }
 
   @media (max-width: 640px) {
     .hero-right { display: none; }
