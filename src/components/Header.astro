@@ -116,26 +116,22 @@
     });
   });
 
-  // PWA install — só mobile/tablet, não em standalone e não se já instalou
+  // PWA install — só mobile/tablet e não em standalone
   function checkStandalone() {
     return window.matchMedia('(display-mode: standalone)').matches ||
       (navigator as any).standalone === true;
   }
   const isMobileTablet = window.matchMedia('(max-width: 1024px)').matches;
-  const alreadyInstalled = localStorage.getItem('pwa-installed') === 'true';
   let deferredPrompt: any = null;
   const installBtn = document.getElementById('pwa-install-btn');
 
-  // Força esconder se já está rodando como PWA
+  // Esconde se está rodando como PWA instalado
   if (checkStandalone()) {
     installBtn?.classList.add('hidden');
-  }
-
-  if (!checkStandalone() && !alreadyInstalled && isMobileTablet) {
+  } else if (isMobileTablet) {
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
-      // Re-checa no momento do evento (segurança extra)
-      if (checkStandalone() || localStorage.getItem('pwa-installed') === 'true') return;
+      if (checkStandalone()) return;
       deferredPrompt = e;
       installBtn?.classList.remove('hidden');
     });
@@ -144,15 +140,11 @@
     if (!deferredPrompt) return;
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === 'accepted') {
-      installBtn.classList.add('hidden');
-      localStorage.setItem('pwa-installed', 'true');
-    }
+    if (outcome === 'accepted') installBtn.classList.add('hidden');
     deferredPrompt = null;
   });
   window.addEventListener('appinstalled', () => {
     installBtn?.classList.add('hidden');
-    localStorage.setItem('pwa-installed', 'true');
     deferredPrompt = null;
   });
 </script>
