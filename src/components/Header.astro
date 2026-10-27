@@ -117,16 +117,25 @@
   });
 
   // PWA install — só mobile/tablet, não em standalone e não se já instalou
-  const isStandalone =
-    window.matchMedia('(display-mode: standalone)').matches ||
-    (navigator as any).standalone === true;
+  function checkStandalone() {
+    return window.matchMedia('(display-mode: standalone)').matches ||
+      (navigator as any).standalone === true;
+  }
   const isMobileTablet = window.matchMedia('(max-width: 1024px)').matches;
   const alreadyInstalled = localStorage.getItem('pwa-installed') === 'true';
   let deferredPrompt: any = null;
   const installBtn = document.getElementById('pwa-install-btn');
-  if (!isStandalone && !alreadyInstalled && isMobileTablet) {
+
+  // Força esconder se já está rodando como PWA
+  if (checkStandalone()) {
+    installBtn?.classList.add('hidden');
+  }
+
+  if (!checkStandalone() && !alreadyInstalled && isMobileTablet) {
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
+      // Re-checa no momento do evento (segurança extra)
+      if (checkStandalone() || localStorage.getItem('pwa-installed') === 'true') return;
       deferredPrompt = e;
       installBtn?.classList.remove('hidden');
     });
