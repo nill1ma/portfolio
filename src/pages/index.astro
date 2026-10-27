@@ -12,6 +12,7 @@ import ProjectCard from '../components/ProjectCard.astro';
       <p class="hero-greeting" data-i18n="hero.greeting">Olá, meu nome é</p>
       <h1 class="hero-name">Avanilson Santos</h1>
       <p class="hero-role" data-i18n="hero.role">Senior Frontend Developer</p>
+      <p class="hero-bio" data-i18n="hero.bio">Construo interfaces modernas com foco em performance e acessibilidade. Atualmente na Ci&amp;T.</p>
       <div class="hero-links">
         <a href="https://github.com/nill1ma" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="GitHub de Avanilson Santos">GitHub</a>
         <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="LinkedIn de Avanilson Santos">LinkedIn</a>
@@ -76,11 +77,11 @@ import ProjectCard from '../components/ProjectCard.astro';
   @reference "../styles/global.css";
 
   .main {
-    @apply max-w-4xl mx-auto px-6 pt-24;
+    @apply max-w-4xl mx-auto px-6;
   }
 
   .hero {
-    @apply min-h-screen flex flex-col justify-center;
+    @apply min-h-screen flex flex-col justify-center pt-16;
   }
 
 
@@ -164,7 +165,15 @@ import ProjectCard from '../components/ProjectCard.astro';
   }
 
   .hero-role {
-    @apply text-xl text-zinc-600 mb-8;
+    @apply text-xl text-zinc-600 mb-4;
+  }
+
+  .hero-bio {
+    @apply text-zinc-500 mb-8 max-w-md leading-relaxed;
+  }
+
+  :global(.dark) .hero-bio {
+    @apply text-zinc-400;
   }
 
   :global(.dark) .hero-role {
