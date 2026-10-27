@@ -1,7 +1,7 @@
 export const translations = {
   pt: {
     nav: { about: 'Sobre', projects: 'Projetos', contact: 'Contato' },
-    hero: { greeting: 'Olá, meu nome é', role: 'Senior Frontend Developer', bio: 'Construo interfaces modernas com foco em performance e acessibilidade. Atualmente na Ci&T.' },
+    hero: { greeting: 'Olá, meu nome é', role: 'Senior Frontend Developer', bio: 'Construo interfaces modernas, acessíveis e com suporte a PWA.', stats: { years: 'anos de experiência', projects: 'projetos entregues', companies: 'empresas', stacks: 'stacks principais' } },
     about: {
       title: 'Sobre',
       text: 'Desenvolvedor Frontend Sênior com mais de 10 anos de experiência construindo interfaces modernas com React, Next.js e TypeScript. Apaixonado por performance, acessibilidade e boas práticas de desenvolvimento.',
@@ -16,7 +16,7 @@ export const translations = {
   },
   en: {
     nav: { about: 'About', projects: 'Projects', contact: 'Contact' },
-    hero: { greeting: 'Hi, my name is', role: 'Senior Frontend Developer', bio: 'I build modern interfaces focused on performance and accessibility. Currently at Ci&T.' },
+    hero: { greeting: 'Hi, my name is', role: 'Senior Frontend Developer', bio: 'I build modern, accessible interfaces with PWA support.', stats: { years: 'years of experience', projects: 'projects delivered', companies: 'companies', stacks: 'main stacks' } },
     about: {
       title: 'About',
       text: 'Senior Frontend Developer with over 10 years of experience building modern interfaces with React, Next.js and TypeScript. Passionate about performance, accessibility and best development practices.',
@@ -31,7 +31,7 @@ export const translations = {
   },
   es: {
     nav: { about: 'Sobre mí', projects: 'Proyectos', contact: 'Contacto' },
-    hero: { greeting: 'Hola, mi nombre es', role: 'Desarrollador Frontend Senior', bio: 'Construyo interfaces modernas con foco en rendimiento y accesibilidad. Actualmente en Ci&T.' },
+    hero: { greeting: 'Hola, mi nombre es', role: 'Desarrollador Frontend Senior', bio: 'Construyo interfaces modernas, accesibles y con soporte PWA.', stats: { years: 'años de experiencia', projects: 'proyectos entregados', companies: 'empresas', stacks: 'stacks principales' } },
     about: {
       title: 'Sobre mí',
       text: 'Desarrollador Frontend Senior con más de 10 años de experiencia construyendo interfaces modernas con React, Next.js y TypeScript. Apasionado por el rendimiento, la accesibilidad y las buenas prácticas de desarrollo.',

@@ -9,27 +9,36 @@ import ProjectCard from '../components/ProjectCard.astro';
 
   <main class="main">
     <section id="hero" class="hero">
-      <p class="hero-greeting" data-i18n="hero.greeting">Olá, meu nome é</p>
-      <h1 class="hero-name">Avanilson Santos</h1>
-      <p class="hero-role" data-i18n="hero.role">Senior Frontend Developer</p>
-      <p class="hero-bio" data-i18n="hero.bio">Construo interfaces modernas com foco em performance e acessibilidade. Atualmente na Ci&amp;T.</p>
-      <div class="hero-links">
-        <a href="https://github.com/nill1ma" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="GitHub de Avanilson Santos">GitHub</a>
-        <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="LinkedIn de Avanilson Santos">LinkedIn</a>
+      <div class="hero-left">
+        <p class="hero-greeting" data-i18n="hero.greeting">Olá, meu nome é</p>
+        <h1 class="hero-name">Avanilson Santos</h1>
+        <p class="hero-role" data-i18n="hero.role">Senior Frontend Developer</p>
+        <p class="hero-bio" data-i18n="hero.bio">Construo interfaces modernas com foco em performance e acessibilidade. Atualmente na Ci&amp;T.</p>
+        <div class="hero-links">
+          <a href="https://github.com/nill1ma" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="GitHub de Avanilson Santos">GitHub</a>
+          <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener noreferrer" class="hero-link" aria-label="LinkedIn de Avanilson Santos">LinkedIn</a>
+        </div>
       </div>
-      <div class="hero-stack">
-        <div class="stack-bubble" data-tooltip="React"><img src="/icons/react.svg" alt="React" /></div>
-        <div class="stack-bubble" data-tooltip="Next.js"><img src="/icons/nextjs.svg" alt="Next.js" /></div>
-        <div class="stack-bubble" data-tooltip="JavaScript"><img src="/icons/javascript.svg" alt="JavaScript" /></div>
-        <div class="stack-bubble" data-tooltip="TypeScript"><img src="/icons/typescript.svg" alt="TypeScript" /></div>
-        <div class="stack-bubble" data-tooltip="Tailwind CSS"><img src="/icons/tailwind.svg" alt="Tailwind CSS" /></div>
-        <div class="stack-bubble" data-tooltip="Node.js"><img src="/icons/nodejs.svg" alt="Node.js" /></div>
-        <div class="stack-bubble" data-tooltip="Supabase"><img src="/icons/supabase.svg" alt="Supabase" /></div>
-        <div class="stack-bubble" data-tooltip="Express.js"><img src="/icons/express.svg" alt="Express.js" /></div>
-        <div class="stack-bubble" data-tooltip="NestJS"><img src="/icons/nestjs.svg" alt="NestJS" /></div>
-        <div class="stack-bubble" data-tooltip="Styled Components"><img src="/icons/styledcomponents.svg" alt="Styled Components" /></div>
-        <div class="stack-bubble" data-tooltip="Vercel"><img src="/icons/vercel.svg" alt="Vercel" /></div>
+      <div class="hero-right">
+        <div class="hero-icons-grid">
+          <div class="stack-bubble" data-tooltip="React"><img src="/icons/react.svg" alt="React" /></div>
+          <div class="stack-bubble" data-tooltip="Next.js"><img src="/icons/nextjs.svg" alt="Next.js" /></div>
+          <div class="stack-bubble" data-tooltip="TypeScript"><img src="/icons/typescript.svg" alt="TypeScript" /></div>
+          <div class="stack-bubble" data-tooltip="JavaScript"><img src="/icons/javascript.svg" alt="JavaScript" /></div>
+          <div class="stack-bubble" data-tooltip="Tailwind CSS"><img src="/icons/tailwind.svg" alt="Tailwind CSS" /></div>
+          <div class="stack-bubble" data-tooltip="Node.js"><img src="/icons/nodejs.svg" alt="Node.js" /></div>
+          <div class="stack-bubble" data-tooltip="Supabase"><img src="/icons/supabase.svg" alt="Supabase" /></div>
+          <div class="stack-bubble" data-tooltip="Express.js"><img src="/icons/express.svg" alt="Express.js" /></div>
+          <div class="stack-bubble" data-tooltip="NestJS"><img src="/icons/nestjs.svg" alt="NestJS" /></div>
+          <div class="stack-bubble" data-tooltip="Styled Components"><img src="/icons/styledcomponents.svg" alt="Styled Components" /></div>
+          <div class="stack-bubble" data-tooltip="Vercel"><img src="/icons/vercel.svg" alt="Vercel" /></div>
+        <div class="stack-bubble" data-tooltip="PWA"><img src="/icons/pwa.svg" alt="PWA" /></div>
+        </div>
       </div>
+      <a href="#sobre" class="hero-scroll" aria-label="Rolar para o conteúdo">
+        <span>scroll</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
     </section>
 
     <section id="sobre" class="section">
@@ -71,6 +80,26 @@ import ProjectCard from '../components/ProjectCard.astro';
       </div>
     </section>
   </main>
+
+<div id="stack-tooltip" style="position:fixed;background:#18181b;color:#fff;font-size:0.7rem;padding:3px 8px;border-radius:4px;pointer-events:none;white-space:nowrap;z-index:9999;opacity:0;transition:opacity 0.15s;"></div>
+
+<script>
+  const tip = document.getElementById('stack-tooltip');
+  document.querySelectorAll('.stack-bubble[data-tooltip]').forEach(el => {
+    el.addEventListener('mouseenter', e => {
+      tip.textContent = el.dataset.tooltip;
+      tip.style.opacity = '1';
+    });
+    el.addEventListener('mousemove', e => {
+      tip.style.left = (e.clientX - tip.offsetWidth / 2) + 'px';
+      tip.style.top = (e.clientY - tip.offsetHeight - 10) + 'px';
+    });
+    el.addEventListener('mouseleave', () => {
+      tip.style.opacity = '0';
+    });
+  });
+</script>
+
 </Layout>
 
 <style>
@@ -81,7 +110,12 @@ import ProjectCard from '../components/ProjectCard.astro';
   }
 
   .hero {
-    @apply min-h-screen flex flex-col justify-center pt-16;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    @apply min-h-screen pt-16;
   }
 
 
@@ -98,36 +132,19 @@ import ProjectCard from '../components/ProjectCard.astro';
 
   .hero-stack {
     @apply flex flex-wrap gap-3 mt-10 items-end;
+    overflow: visible;
   }
 
   .stack-bubble {
     position: relative;
+    overflow: visible;
   }
 
-  .stack-bubble[data-tooltip]::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: #18181b;
-    color: #fff;
-    font-size: 0.7rem;
-    white-space: nowrap;
-    padding: 3px 8px;
-    border-radius: 4px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.15s;
-  }
 
-  .stack-bubble[data-tooltip]:hover::after {
-    opacity: 1;
-  }
 
   /* original */
   .stack-bubble {
-    @apply w-12 h-12 rounded-2xl border border-zinc-200 bg-zinc-100 flex items-center justify-center p-2 transition-transform hover:scale-110;
+    @apply w-12 h-12 rounded-full border border-zinc-200 bg-zinc-100 flex items-center justify-center p-2 transition-transform hover:scale-110;
   }
 
   :global(.dark) .stack-bubble {
@@ -135,7 +152,7 @@ import ProjectCard from '../components/ProjectCard.astro';
   }
 
   .stack-more {
-    @apply w-12 h-12 rounded-2xl border border-zinc-200 bg-zinc-100 flex items-center justify-center text-sm text-zinc-500 font-medium cursor-default;
+    @apply w-12 h-12 rounded-full border border-zinc-200 bg-zinc-100 flex items-center justify-center text-sm text-zinc-500 font-medium cursor-default;
   }
 
   :global(.dark) .stack-more {
@@ -158,6 +175,18 @@ import ProjectCard from '../components/ProjectCard.astro';
 
   .hero-name {
     @apply text-5xl font-bold text-zinc-900 mb-4;
+    position: relative;
+    display: inline-block;
+  }
+
+  .hero-name::before {
+    content: '';
+    position: absolute;
+    inset: -40px -80px;
+    background: radial-gradient(ellipse at center, rgba(139,92,246,0.25) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
   }
 
   :global(.dark) .hero-name {
@@ -214,5 +243,73 @@ import ProjectCard from '../components/ProjectCard.astro';
 
   .projects-grid {
     @apply grid gap-4 sm:grid-cols-2;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #52525b;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  :global(.dark) .hero-scroll {
+    color: #a1a1aa;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+
+  .hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-right {
+    position: relative;
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-icons-grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-icons-grid .stack-bubble {
+    position: absolute;
+  }
+
+  .hero-icons-grid .stack-bubble:nth-child(1) { left: 106px; top: 6px; }
+  .hero-icons-grid .stack-bubble:nth-child(2) { left: 156px; top: 19px; }
+  .hero-icons-grid .stack-bubble:nth-child(3) { left: 193px; top: 56px; }
+  .hero-icons-grid .stack-bubble:nth-child(4) { left: 206px; top: 106px; }
+  .hero-icons-grid .stack-bubble:nth-child(5) { left: 193px; top: 156px; }
+  .hero-icons-grid .stack-bubble:nth-child(6) { left: 156px; top: 193px; }
+  .hero-icons-grid .stack-bubble:nth-child(7) { left: 106px; top: 206px; }
+  .hero-icons-grid .stack-bubble:nth-child(8) { left: 56px; top: 193px; }
+  .hero-icons-grid .stack-bubble:nth-child(9) { left: 19px; top: 156px; }
+  .hero-icons-grid .stack-bubble:nth-child(10) { left: 6px; top: 106px; }
+  .hero-icons-grid .stack-bubble:nth-child(11) { left: 19px; top: 56px; }
+  .hero-icons-grid .stack-bubble:nth-child(12) { left: 56px; top: 19px; }
+
+  @media (max-width: 640px) {
+    .hero-right { display: none; }
+    .hero { flex-direction: column; align-items: flex-start; }
   }
 </style>
