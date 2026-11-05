@@ -8,8 +8,8 @@ export const translations = {
     },
     projects: {
       title: 'Projetos',
-      monthctrl: { description: 'Gerenciador de tarefas mensais com foco em produtividade e organização pessoal.' },
-      cyclehabits: { description: 'PWA para acompanhamento de hábitos diários como vitaminas, treinos e rotinas, com notificações push e suporte multilíngue.' },
+      monthctrl: { description: 'Aplicação web para controle financeiro mensal, com suporte a múltiplas moedas, registro de entradas e saídas e exportação de dados.' },
+      cyclehabits: { description: 'PWA para acompanhamento de hábitos diários como vitaminas, treinos e rotinas, com notificações push e suporte multilíngue. Pode ser instalado como app no celular.' },
       awakeui: { description: 'Biblioteca de componentes UI para React, inspirada no Material UI, para uso em projetos pessoais e profissionais.' },
       awakr: { description: 'Site institucional para criação de sites para restaurantes e negócios locais, com CMS Sanity, domínio próprio e PWA.' },
     },
@@ -24,8 +24,8 @@ export const translations = {
     },
     projects: {
       title: 'Projects',
-      monthctrl: { description: 'Monthly task manager focused on productivity and personal organization.' },
-      cyclehabits: { description: 'PWA for tracking daily habits like vitamins, workouts and routines, with push notifications and multilingual support.' },
+      monthctrl: { description: 'Web app for monthly financial control, supporting multiple currencies, income and expense tracking, and data export.' },
+      cyclehabits: { description: 'PWA for tracking daily habits like vitamins, workouts and routines, with push notifications and multilingual support. Can be installed as an app on your phone.' },
       awakeui: { description: 'UI component library for React, inspired by Material UI, for use in personal and professional projects.' },
       awakr: { description: 'Institutional website for restaurant and local business site creation, with Sanity CMS, custom domain and PWA.' },
     },
@@ -40,8 +40,8 @@ export const translations = {
     },
     projects: {
       title: 'Proyectos',
-      monthctrl: { description: 'Gestor de tareas mensuales enfocado en la productividad y organización personal.' },
-      cyclehabits: { description: 'PWA para seguimiento de hábitos diarios como vitaminas, ejercicios y rutinas, con notificaciones push y soporte multilingüe.' },
+      monthctrl: { description: 'Aplicación web para control financiero mensual, con soporte a múltiples monedas, registro de ingresos y gastos y exportación de datos.' },
+      cyclehabits: { description: 'PWA para seguimiento de hábitos diarios como vitaminas, ejercicios y rutinas, con notificaciones push y soporte multilingüe. Se puede instalar como app en el móvil.' },
       awakeui: { description: 'Biblioteca de componentes UI para React, inspirada en Material UI, para uso en proyectos personales y profesionales.' },
       awakr: { description: 'Sitio institucional para la creación de sitios web para restaurantes y negocios locales, con CMS Sanity, dominio propio y PWA.' },
     },
