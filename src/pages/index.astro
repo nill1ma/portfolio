@@ -119,6 +119,29 @@ import ProjectCard from '../components/ProjectCard.astro';
       tip.style.opacity = '0';
     });
   });
+
+
+  // URL sync ao scroll
+  const sections = [
+    { id: 'hero', hash: '' },
+    { id: 'sobre', hash: '#sobre' },
+    { id: 'projetos', hash: '#projetos' },
+  ];
+  const urlObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const section = sections.find(s => s.id === entry.target.id);
+        if (section) {
+          const url = section.hash ? section.hash : window.location.pathname;
+          history.replaceState(null, '', url || '/');
+        }
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => {
+    const el = document.getElementById(s.id);
+    if (el) urlObserver.observe(el);
+  });
 </script>
 
 
