@@ -182,7 +182,7 @@ import ProjectCard from '../components/ProjectCard.astro';
         <textarea name="message" rows="4" placeholder="Mensagem" required aria-label="Mensagem" data-i18n-placeholder="contact.messagePlaceholder"></textarea>
         <button type="submit" class="cta-btn" data-i18n="contact.send">Enviar mensagem</button>
       </form>
-      <p class="contact-alt">Ou direto pelo <a href="mailto:avanilson.limasantos@gmail.com">e-mail</a> ou <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener">LinkedIn</a>.</p>
+      <p class="contact-alt" data-i18n="contact.alt">Ou direto pelo <a href="mailto:avanilson.limasantos@gmail.com">e-mail</a> ou <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener">LinkedIn</a>.</p>
     </section>
   </main>
 
@@ -190,19 +190,22 @@ import ProjectCard from '../components/ProjectCard.astro';
 
 <script>
   const tip = document.getElementById('stack-tooltip');
-  document.querySelectorAll('.stack-bubble[data-tooltip]').forEach(el => {
-    el.addEventListener('mouseenter', e => {
-      tip.textContent = el.dataset.tooltip;
-      tip.style.opacity = '1';
+  if (tip) {
+    document.querySelectorAll('.stack-bubble[data-tooltip]').forEach(el => {
+      const element = el as HTMLElement;
+      element.addEventListener('mouseenter', () => {
+        tip.textContent = element.dataset.tooltip || '';
+        tip.style.opacity = '1';
+      });
+      element.addEventListener('mousemove', (e: MouseEvent) => {
+        tip.style.left = (e.clientX - tip.offsetWidth / 2) + 'px';
+        tip.style.top = (e.clientY - tip.offsetHeight - 10) + 'px';
+      });
+      element.addEventListener('mouseleave', () => {
+        tip.style.opacity = '0';
+      });
     });
-    el.addEventListener('mousemove', e => {
-      tip.style.left = (e.clientX - tip.offsetWidth / 2) + 'px';
-      tip.style.top = (e.clientY - tip.offsetHeight - 10) + 'px';
-    });
-    el.addEventListener('mouseleave', () => {
-      tip.style.opacity = '0';
-    });
-  });
+  }
 
 
   // URL sync ao scroll
