@@ -58,7 +58,7 @@ export const translations = {
     },
     about: {
       title: 'About',
-      text: '10+ years building scalable web applications — currently at Ci&T, previously at ThoughtWorks and other leading consultancies across Brazil. Core stack in React, TypeScript and Next.js, with a focus on quality: good test coverage, clean code, and clear communication with product and design teams.\n\nBeyond delivery, I\'ve mentored developers transitioning into tech, led technical interviews, and facilitated agile ceremonies. Currently open to remote opportunities with national and international companies.',
+      text: '10+ years building scalable web applications — currently at Ci&T, previously at ThoughtWorks and other leading consultancies across Brazil. Core stack in React, TypeScript and Next.js, with a focus on quality: good test coverage, clean code, and clear communication with product and design teams.\n\nBeyond delivery, I\'ve mentored developers transitioning into tech, led technical interviews, and facilitated agile ceremonies. Currently open to remote opportunities in Brazil and abroad.',
     },
     projects: {
       title: 'Projects',
@@ -102,7 +102,7 @@ export const translations = {
     },
     about: {
       title: 'Sobre mí',
-      text: 'Más de 10 años construyendo aplicaciones web escalables — actualmente en Ci&T, con experiencia previa en ThoughtWorks y otras consultoras de referencia en Brasil. Stack principal en React, TypeScript y Next.js, con foco en calidad: buena cobertura de tests, código limpio y comunicación clara con producto y diseño.\n\nMás allá de la entrega, mentoreé desarrolladores en transición de carrera, realicé entrevistas técnicas y facilité ceremonias ágiles. Abierto a oportunidades remotas con empresas nacionales e internacionales.',
+      text: 'Más de 10 años construyendo aplicaciones web escalables — actualmente en Ci&T, con experiencia previa en ThoughtWorks y otras consultoras de referencia en Brasil. Stack principal en React, TypeScript y Next.js, con foco en calidad: buena cobertura de tests, código limpio y comunicación clara con producto y diseño.\n\nMás allá de la entrega, orienté a desarrolladores en transición de carrera, realicé entrevistas técnicas y facilité ceremonias ágiles. Abierto a oportunidades remotas con empresas nacionales e internacionales.',
     },
     projects: {
       title: 'Proyectos',
