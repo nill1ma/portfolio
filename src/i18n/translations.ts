@@ -14,7 +14,7 @@ export const translations = {
     },
     about: {
       title: 'Sobre',
-      text: 'Desenvolvedor Frontend Sênior com mais de 10 anos de experiência construindo interfaces modernas com React, Next.js e TypeScript. Apaixonado por performance, acessibilidade e boas práticas de desenvolvimento.',
+      text: 'Mais de 10 anos construindo aplicações web escaláveis — atualmente na Ci&T, com passagens por ThoughtWorks e outras consultorias de referência no Brasil. Stack principal em React, TypeScript e Next.js, com foco em qualidade: cobertura de testes, código limpo e comunicação clara com produto e design.\n\nAlém da entrega, já mentoreei desenvolvedores em transição de carreira, conduzi entrevistas técnicas e facilitei cerimônias ágeis. Aberto a oportunidades remotas com empresas nacionais e internacionais.',
     },
     projects: {
       title: 'Projetos',
@@ -58,7 +58,7 @@ export const translations = {
     },
     about: {
       title: 'About',
-      text: 'Senior Frontend Developer with over 10 years of experience building modern interfaces with React, Next.js and TypeScript. Passionate about performance, accessibility and best development practices.',
+      text: '10+ years building scalable web applications — currently at Ci&T, previously at ThoughtWorks and other leading consultancies across Brazil. Core stack in React, TypeScript and Next.js, with a focus on quality: good test coverage, clean code, and clear communication with product and design teams.\n\nBeyond delivery, I\'ve mentored developers transitioning into tech, led technical interviews, and facilitated agile ceremonies. Currently open to remote opportunities with national and international companies.',
     },
     projects: {
       title: 'Projects',
@@ -102,7 +102,7 @@ export const translations = {
     },
     about: {
       title: 'Sobre mí',
-      text: 'Desarrollador Frontend Senior con más de 10 años de experiencia construyendo interfaces modernas con React, Next.js y TypeScript. Apasionado por el rendimiento, la accesibilidad y las buenas prácticas de desarrollo.',
+      text: 'Más de 10 años construyendo aplicaciones web escalables — actualmente en Ci&T, con experiencia previa en ThoughtWorks y otras consultoras de referencia en Brasil. Stack principal en React, TypeScript y Next.js, con foco en calidad: buena cobertura de tests, código limpio y comunicación clara con producto y diseño.\n\nMás allá de la entrega, he mentoreado desarrolladores en transición de carrera, realicé entrevistas técnicas y facilité ceremonias ágiles. Abierto a oportunidades remotas con empresas nacionales e internacionales.',
     },
     projects: {
       title: 'Proyectos',
