@@ -15,7 +15,7 @@ export const translations = {
     },
     projects: {
       title: 'Projetos',
-      monthctrl: { description: 'Controle financeiro pessoal com suporte a múltiplas moedas. Registre receitas e despesas por referência (mês/ano), acompanhe o saldo líquido e exporte relatórios em PDF com filtros customizáveis. Pipeline com agentes de pre-commit (i18n, testes, WCAG) e code review automático a cada PR — 112 testes | Lighthouse 100 (Performance) | Acessibilidade 92 (Lighthouse).' },
+      monthctrl: { description: 'Controle financeiro pessoal com suporte a múltiplas moedas. Registre receitas e despesas por referência (mês/ano), acompanhe o saldo líquido e exporte relatórios em PDF com filtros customizáveis. Pipeline com agentes de pre-commit (i18n, testes, WCAG) e code review automático a cada PR — 235 testes | Cobertura 94% (statements) / 96% (lines) | Lighthouse 100 (Performance) | Acessibilidade 92 (Lighthouse).' },
       cyclehabits: { description: 'PWA de hábitos diários instalável como app mobile. Cadastre hábitos com tipo, horário e lembretes via push notification (OneSignal). Roda no browser e instalado como app — sem loja de aplicativos.' },
       awakeui: { description: 'Design system próprio publicado no npm com Storybook detalhado (.mdx + .stories). 23 componentes, 21 versões publicadas — base de todos os projetos do portfólio (monthctrl, cyclehabits e awakr).' },
       awakr: { description: 'Plataforma multi-tenant para sites de pequenos negócios: vitrine, cardápio, eventos e promoções. CMS headless (Sanity), domínio próprio, PWA e deploy via Cloudflare Pages. Prova de CMS + multi-tenant + performance de borda.' },
