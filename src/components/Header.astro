@@ -11,6 +11,7 @@
       <a href="#technologies" class="nav-link" data-i18n="nav.technologies">Tecnologias</a>
       <a href="#experiencia" class="nav-link" data-i18n="nav.experience">Experiência</a>
       <a href="#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+      <a href="#cta" class="nav-link nav-link--cta" data-i18n="nav.cta">Vamos trabalhar juntos?</a>
 
       <div class="lang-switcher">
         <button class="lang-btn" data-lang="pt" aria-label="Mudar idioma para Português">PT</button>
@@ -59,6 +60,7 @@
     <a href="#technologies" class="mobile-link" data-i18n="nav.technologies">Tecnologias</a>
     <a href="#experiencia" class="mobile-link" data-i18n="nav.experience">Experiência</a>
     <a href="#projetos" class="mobile-link" data-i18n="nav.projects">Projetos</a>
+    <a href="#cta" class="mobile-link" data-i18n="nav.cta">Vamos trabalhar juntos?</a>
   </div>
 </header>
 
@@ -240,6 +242,11 @@
     @apply text-sm text-zinc-600 no-underline transition-colors hover:text-zinc-900;
   }
   :global(.dark) .nav-link { @apply text-zinc-400 hover:text-white; }
+
+  .nav-link--cta {
+    @apply text-sm font-semibold text-indigo-600 no-underline transition-colors hover:text-indigo-700;
+  }
+  :global(.dark) .nav-link--cta { @apply text-indigo-400 hover:text-indigo-300; }
 
   .menu-btn {
     @apply bg-transparent border-0 cursor-pointer p-1 text-zinc-700;

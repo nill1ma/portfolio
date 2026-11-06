@@ -1,6 +1,6 @@
 export const translations = {
   pt: {
-    nav: { about: 'Sobre', technologies: 'Tecnologias', experience: 'Experiência', projects: 'Projetos', contact: 'Contato' },
+    nav: { about: 'Sobre', technologies: 'Tecnologias', experience: 'Experiência', projects: 'Projetos', contact: 'Contato', cta: 'Vamos trabalhar juntos?' },
     technologies: { title: 'Tecnologias' },
     hero: { greeting: 'Olá, meu nome é', role: 'Senior Frontend Developer', bio: 'Mais de 10 anos construindo interfaces modernas, acessíveis, com suporte a PWA e bem testadas — com Jest, React Testing Library, Cypress e Playwright. Atualmente na Ci&T.', stats: { years: 'anos de experiência', projects: 'projetos entregues', companies: 'empresas', stacks: 'stacks principais' } },
     experience: {
@@ -35,9 +35,13 @@ export const translations = {
       error: 'Erro ao enviar mensagem. Tente novamente.',
       alt: 'Ou direto pelo <a href="mailto:avanilson.limasantos@gmail.com">e-mail</a> ou <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener">LinkedIn</a>.',
     },
+    cta: {
+      title: 'Vamos trabalhar juntos?',
+      button: 'Entre em contato',
+    },
   },
   en: {
-    nav: { about: 'About', technologies: 'Technologies', experience: 'Experience', projects: 'Projects', contact: 'Contact' },
+    nav: { about: 'About', technologies: 'Technologies', experience: 'Experience', projects: 'Projects', contact: 'Contact', cta: "Let's work together?" },
     technologies: { title: 'Technologies' },
     hero: { greeting: 'Hi, my name is', role: 'Senior Frontend Developer', bio: 'Over 10 years building modern, accessible, PWA-ready and well-tested interfaces — with Jest, React Testing Library, Cypress and Playwright. Currently at Ci&T.', stats: { years: 'years of experience', projects: 'projects delivered', companies: 'companies', stacks: 'main stacks' } },
     experience: {
@@ -72,9 +76,13 @@ export const translations = {
       error: 'Error sending message. Please try again.',
       alt: 'Or directly via <a href="mailto:avanilson.limasantos@gmail.com">email</a> or <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener">LinkedIn</a>.',
     },
+    cta: {
+      title: "Let's work together?",
+      button: 'Get in touch',
+    },
   },
   es: {
-    nav: { about: 'Sobre mí', technologies: 'Tecnologías', experience: 'Experiencia', projects: 'Proyectos', contact: 'Contacto' },
+    nav: { about: 'Sobre mí', technologies: 'Tecnologías', experience: 'Experiencia', projects: 'Proyectos', contact: 'Contacto', cta: '¿Vamos a trabajar juntos?' },
     technologies: { title: 'Tecnologías' },
     hero: { greeting: 'Hola, mi nombre es', role: 'Desarrollador Frontend Senior', bio: 'Más de 10 años construyendo interfaces modernas, accesibles, con soporte PWA y bien testeadas — con Jest, React Testing Library, Cypress y Playwright. Actualmente en Ci&T.', stats: { years: 'años de experiencia', projects: 'proyectos entregados', companies: 'empresas', stacks: 'stacks principales' } },
     experience: {
@@ -108,6 +116,10 @@ export const translations = {
       success: '¡Mensaje enviado con éxito!',
       error: 'Error al enviar mensaje. Intente nuevamente.',
       alt: 'O directamente por <a href="mailto:avanilson.limasantos@gmail.com">email</a> o <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener">LinkedIn</a>.',
+    },
+    cta: {
+      title: '¿Vamos a trabajar juntos?',
+      button: 'Ponte en contacto',
     },
   },
 } as const;

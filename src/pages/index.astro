@@ -167,7 +167,8 @@ import ProjectCard from '../components/ProjectCard.astro';
       </div>
     </section>
 
-    <section id="contato" class="section contact-section">
+
+    <section id="cta" class="section contact-section">
       <h2 class="section-title" data-i18n="contact.title">Vamos conversar?</h2>
       <p class="contact-subtitle" data-i18n="contact.subtitle">Aberto a oportunidades remotas no Brasil e no exterior.</p>
       <form
@@ -219,6 +220,7 @@ import ProjectCard from '../components/ProjectCard.astro';
     { id: 'hero', hash: '' },
     { id: 'sobre', hash: '#sobre' },
     { id: 'projetos', hash: '#projetos' },
+    { id: 'cta', hash: '#cta' },
   ];
   const urlObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -745,5 +747,26 @@ import ProjectCard from '../components/ProjectCard.astro';
   [data-fs-error][data-fs-active] {
     display: block !important;
   }
+
+  /* CTA section */
+  .cta-section {
+    text-align: center;
+    padding: 6rem 0;
+  }
+  .cta-btn--section {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.875rem 2.5rem;
+    background: var(--color-accent, #6366f1);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    text-decoration: none;
+  }
+  .cta-btn--section:hover { opacity: 0.85; }
 
 </style>
