@@ -95,8 +95,9 @@ import ProjectCard from '../components/ProjectCard.astro';
             <span class="exp-period">jan/2024 — <span data-i18n="experience.present">presente</span></span>
           </div>
           <span class="exp-role">Senior Frontend Developer</span>
+          <p class="exp-desc" data-i18n="experience.cit">Desenvolvimento e entrega de features de alto impacto em aplicações web complexas, do design à produção. Proposta e implementação de melhorias técnicas de performance e DX; mentoria de desenvolvedores juniores; facilitação de cerimônias ágeis em times cross-funcionais.</p>
           <div class="exp-stack">
-            <span>React</span><span>TypeScript</span><span>Next.js</span><span>Tailwind CSS</span><span>Jest</span><span>Playwright</span>
+            <span>React</span><span>TypeScript</span><span>Next.js</span><span>Tailwind CSS</span><span>Redux</span><span>MUI</span><span>Jest</span><span>Cypress</span>
           </div>
         </div>
         <div class="exp-item">
@@ -105,6 +106,7 @@ import ProjectCard from '../components/ProjectCard.astro';
             <span class="exp-period">out/2023 — jan/2024</span>
           </div>
           <span class="exp-role">Senior Frontend Developer</span>
+          <p class="exp-desc" data-i18n="experience.ntt">Desenvolvimento e manutenção de features frontend em ambiente enterprise de grande porte, com entrega consistente em workflows ágeis distribuídos.</p>
           <div class="exp-stack">
             <span>React</span><span>TypeScript</span><span>Styled Components</span>
           </div>
@@ -115,8 +117,9 @@ import ProjectCard from '../components/ProjectCard.astro';
             <span class="exp-period">mar/2021 — ago/2023</span>
           </div>
           <span class="exp-role">Senior Frontend Developer</span>
+          <p class="exp-desc" data-i18n="experience.thoughtworks">Soluções frontend e fullstack para clientes de múltiplos setores na maior consultoria de tecnologia do mundo. Liderou treinamentos internos de JavaScript e React.js, conduziu entrevistas técnicas e apoiou onboarding de novos engenheiros. Monitoramento de incidentes em produção com Kibana.</p>
           <div class="exp-stack">
-            <span>React</span><span>TypeScript</span><span>Next.js</span><span>Redux</span><span>Cypress</span><span>Testing Library</span>
+            <span>React</span><span>TypeScript</span><span>Next.js</span><span>Node.js</span><span>Redux</span><span>Jest</span><span>Playwright</span><span>Kibana</span>
           </div>
         </div>
         <div class="exp-item exp-item--earlier">
@@ -642,6 +645,16 @@ import ProjectCard from '../components/ProjectCard.astro';
     width: 20px;
     height: 20px;
     object-fit: contain;
+  }
+
+  .exp-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--color-muted, #6b7280);
+    margin: 0.4rem 0 0.75rem;
+  }
+  :global(.dark) .exp-desc {
+    color: #9ca3af;
   }
 
   /* ── Contact ── */
