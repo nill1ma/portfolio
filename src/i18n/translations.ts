@@ -8,13 +8,13 @@ export const translations = {
       present: 'presente',
       cit: 'Desenvolvimento e entrega de features em aplicações web complexas: formulários com validações avançadas (React Hook Form + Zod), approval flows, importação de XLSX e exportação de JSON para clone entre ambientes (SIT, UAT, produção). Proposta e implementação de melhorias técnicas de performance e DX; mentoria de 1 desenvolvedor pleno; facilitação de cerimônias ágeis em times cross-funcionais.',
       ntt: 'Desenvolvimento de features frontend em sistema corporativo de abertura de chamados, em ambiente enterprise de grande porte e times ágeis distribuídos. Acompanhamento de 1 estagiário durante o engajamento.',
-      thoughtworks: 'Soluções frontend e fullstack para clientes de múltiplos setores na maior consultoria de tecnologia do mundo. Liderança de treinamentos internos de JavaScript e React.js para turmas de ~17 profissionais, condução de mais de 10 entrevistas técnicas e apoio ao onboarding de novos engenheiros. Monitoramento de incidentes em produção com Kibana.',
+      thoughtworks: 'Soluções frontend e fullstack para clientes de múltiplos setores em uma das principais consultorias de tecnologia do mundo. Liderança de treinamentos internos de JavaScript e React.js para turmas de ~17 profissionais, condução de mais de 10 entrevistas técnicas e apoio ao onboarding de novos engenheiros. Monitoramento de incidentes em produção com Kibana.',
       earlier: 'Anteriormente',
       earlierDesc: 'Capgemini, Accenture, FCamara, Solutis, Mazzatech, Iteris (2013–2021) — projetos em Angular, Vue.js, PHP, Java Spring Boot e React, em setores como financeiro, varejo e setor público.',
     },
     about: {
       title: 'Sobre',
-      text: 'Mais de 10 anos construindo aplicações web escaláveis — atualmente na Ci&T, com passagens por ThoughtWorks e outras consultorias de referência no Brasil. Stack principal em React, TypeScript e Next.js, com foco em qualidade: cobertura de testes, código limpo e comunicação clara com produto e design.\n\nAlém da entrega, já mentoreei desenvolvedores em transição de carreira, conduzi entrevistas técnicas e facilitei cerimônias ágeis. Aberto a oportunidades remotas com empresas nacionais e internacionais.',
+      text: 'Mais de 10 anos construindo aplicações web escaláveis — atualmente na Ci&T, com passagens por ThoughtWorks e outras consultorias de referência no Brasil. Stack principal em React, TypeScript e Next.js, com foco em qualidade: cobertura de testes, código limpo e comunicação clara com produto e design.\n\nAlém da entrega, já mentorei desenvolvedores em transição de carreira, conduzi entrevistas técnicas e facilitei cerimônias ágeis. Aberto a oportunidades remotas com empresas nacionais e internacionais.',
     },
     projects: {
       title: 'Projetos',
@@ -102,7 +102,7 @@ export const translations = {
     },
     about: {
       title: 'Sobre mí',
-      text: 'Más de 10 años construyendo aplicaciones web escalables — actualmente en Ci&T, con experiencia previa en ThoughtWorks y otras consultoras de referencia en Brasil. Stack principal en React, TypeScript y Next.js, con foco en calidad: buena cobertura de tests, código limpio y comunicación clara con producto y diseño.\n\nMás allá de la entrega, he mentoreado desarrolladores en transición de carrera, realicé entrevistas técnicas y facilité ceremonias ágiles. Abierto a oportunidades remotas con empresas nacionales e internacionales.',
+      text: 'Más de 10 años construyendo aplicaciones web escalables — actualmente en Ci&T, con experiencia previa en ThoughtWorks y otras consultoras de referencia en Brasil. Stack principal en React, TypeScript y Next.js, con foco en calidad: buena cobertura de tests, código limpio y comunicación clara con producto y diseño.\n\nMás allá de la entrega, mentoreé desarrolladores en transición de carrera, realicé entrevistas técnicas y facilité ceremonias ágiles. Abierto a oportunidades remotas con empresas nacionales e internacionales.',
     },
     projects: {
       title: 'Proyectos',
