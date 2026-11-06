@@ -6,7 +6,7 @@ export const translations = {
     experience: {
       title: 'Experiência',
       present: 'presente',
-      cit: 'Desenvolvimento e entrega de features em aplicações web complexas: formulários com validações avançadas (React Hook Form + Zod), approval flows, importação de XLSX e exportação de JSON para clone entre ambientes (SIT, UAT, produção). Proposta e implementação de melhorias técnicas de performance e DX; mentoria de 1 desenvolvedor pleno; facilitação de cerimônias ágeis em times cross-funcionais.',
+      cit: 'Desenvolvimento e entrega de features em aplicações web complexas: formulários com validações avançadas (React Hook Form + Zod), approval flows, importação de XLSX e exportação de JSON para clone entre ambientes (SIT, UAT, produção). Diagnóstico e correção de travamento de aba em formulário com infinite scroll: individualização de instâncias do RHF (evitando revalidação global no onChange) e virtualização com TanStack Virtual para listas com 300+ produtos por oferta; mentoria de 1 desenvolvedor pleno; facilitação de cerimônias ágeis em times cross-funcionais.',
       ntt: 'Desenvolvimento de features frontend em sistema corporativo de abertura de chamados, em ambiente enterprise de grande porte e times ágeis distribuídos. Acompanhamento de 1 estagiário durante o engajamento.',
       thoughtworks: 'Soluções frontend e fullstack para clientes de múltiplos setores em uma das principais consultorias de tecnologia do mundo. Liderança de treinamentos internos de JavaScript e React.js para turmas de ~17 profissionais, condução de mais de 10 entrevistas técnicas e apoio ao onboarding de novos engenheiros. Monitoramento de incidentes em produção com Kibana.',
       earlier: 'Anteriormente',
@@ -50,7 +50,7 @@ export const translations = {
     experience: {
       title: 'Experience',
       present: 'present',
-      cit: 'Developed and shipped features across complex web applications: advanced-validation forms (React Hook Form + Zod), approval flows, XLSX import and JSON export for cross-environment cloning (SIT, UAT, production). Proposed technical improvements for performance and DX; mentored 1 mid-level developer; facilitated agile ceremonies in cross-functional teams.',
+      cit: 'Developed and shipped features across complex web applications: advanced-validation forms (React Hook Form + Zod), approval flows, XLSX import and JSON export for cross-environment cloning (SIT, UAT, production). Diagnosed and fixed a tab-freezing issue on a large infinite-scroll form: split into per-offer RHF instances (scoping onChange revalidation) and introduced TanStack Virtual — handling 300+ products per offer without performance degradation. Mentored 1 mid-level developer; facilitated agile ceremonies in cross-functional teams.',
       ntt: 'Frontend development for a corporate ticket management system in a large enterprise environment, working within distributed agile teams. Supported 1 intern throughout the engagement.',
       thoughtworks: 'Frontend and fullstack solutions for clients across multiple industries at one of the world\'s leading tech consultancies. Led internal JavaScript and React.js training sessions for cohorts of ~17 professionals, conducted 10+ technical interviews, and supported onboarding of new engineers. Monitored production incidents using Kibana.',
       earlier: 'Earlier',
@@ -94,7 +94,7 @@ export const translations = {
     experience: {
       title: 'Experiencia',
       present: 'presente',
-      cit: 'Desarrollo y entrega de funcionalidades en aplicaciones web complejas: formularios con validaciones avanzadas (React Hook Form + Zod), flujos de aprobación, importación de XLSX y exportación de JSON para clonación entre ambientes (SIT, UAT, producción). Mejoras técnicas de rendimiento y experiencia de desarrollo; mentoría de 1 desarrollador semi-sénior; facilitación de ceremonias ágiles en equipos transversales.',
+      cit: 'Desarrollo y entrega de funcionalidades en aplicaciones web complejas: formularios con validaciones avanzadas (React Hook Form + Zod), flujos de aprobación, importación de XLSX y exportación de JSON para clonación entre ambientes (SIT, UAT, producción). Diagnóstico y corrección de congelamiento de pestaña en formulario con scroll infinito: instancias individuales de RHF por oferta (evitando revalidación global en onChange) y virtualización con TanStack Virtual para listas de 300+ productos por oferta. Mentoría de 1 desarrollador semi-sénior; facilitación de ceremonias ágiles en equipos transversales.',
       ntt: 'Desarrollo de funcionalidades frontend en un sistema corporativo de gestión de tickets, en un ambiente empresarial de gran escala con equipos ágiles distribuidos. Acompañamiento de 1 practicante durante el proyecto.',
       thoughtworks: 'Entregué soluciones frontend y fullstack para clientes de múltiples sectores en una de las principales consultoras de tecnología del mundo. Lideré sesiones internas de formación en JavaScript y React.js para grupos de ~17 profesionales, realicé más de 10 entrevistas técnicas y apoyé la incorporación de nuevos ingenieros. Monitoreé incidentes en producción con Kibana.',
       earlier: 'Anteriormente',
