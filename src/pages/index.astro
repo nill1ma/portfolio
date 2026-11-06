@@ -171,17 +171,18 @@ import ProjectCard from '../components/ProjectCard.astro';
       <h2 class="section-title" data-i18n="contact.title">Vamos conversar?</h2>
       <p class="contact-subtitle" data-i18n="contact.subtitle">Aberto a oportunidades remotas no Brasil e no exterior.</p>
       <form
-        action="https://formspree.io/f/xpwzgool"
-        method="POST"
+        id="contact-form"
         class="contact-form"
       >
         <div class="form-row">
-          <input type="text" name="name" placeholder="Seu nome" required aria-label="Seu nome" data-i18n-placeholder="contact.namePlaceholder" />
-          <input type="email" name="email" placeholder="Seu e-mail" required aria-label="Seu e-mail" data-i18n-placeholder="contact.emailPlaceholder" />
+          <input type="text" name="name" placeholder="Seu nome" required aria-label="Seu nome" data-i18n-placeholder="contact.namePlaceholder" data-fs-field />
+          <input type="email" name="email" placeholder="Seu e-mail" required aria-label="Seu e-mail" data-i18n-placeholder="contact.emailPlaceholder" data-fs-field />
         </div>
-        <textarea name="message" rows="4" placeholder="Mensagem" required aria-label="Mensagem" data-i18n-placeholder="contact.messagePlaceholder"></textarea>
-        <button type="submit" class="cta-btn" data-i18n="contact.send">Enviar mensagem</button>
+        <textarea name="message" rows="4" placeholder="Mensagem" required aria-label="Mensagem" data-i18n-placeholder="contact.messagePlaceholder" data-fs-field></textarea>
+        <button type="submit" class="cta-btn" data-i18n="contact.send" data-fs-submit-btn>Enviar mensagem</button>
       </form>
+      <div data-fs-success class="form-message success" data-i18n="contact.success">Mensagem enviada com sucesso!</div>
+      <div data-fs-error class="form-message error" data-i18n="contact.error">Erro ao enviar mensagem. Tente novamente.</div>
       <p class="contact-alt" data-i18n="contact.alt">Ou direto pelo <a href="mailto:avanilson.limasantos@gmail.com">e-mail</a> ou <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener">LinkedIn</a>.</p>
     </section>
   </main>
@@ -207,6 +208,11 @@ import ProjectCard from '../components/ProjectCard.astro';
     });
   }
 
+  // @formspree/ajax via script tag
+  (window as any).formspree = (window as any).formspree || function() {
+    ((window as any).formspree.q = (window as any).formspree.q || []).push(arguments);
+  };
+  (window as any).formspree('initForm', { formElement: '#contact-form', formId: 'xqppjjgz' });
 
   // URL sync ao scroll
   const sections = [
@@ -230,6 +236,7 @@ import ProjectCard from '../components/ProjectCard.astro';
     if (el) urlObserver.observe(el);
   });
 </script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 
 
@@ -706,5 +713,37 @@ import ProjectCard from '../components/ProjectCard.astro';
     text-decoration: none;
   }
   .contact-alt a:hover { text-decoration: underline; }
+
+  .form-message {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: none;
+  }
+  .form-message.success {
+    background: #dcfce7;
+    color: #166534;
+  }
+  :global(.dark) .form-message.success {
+    background: #14532d;
+    color: #dcfce7;
+  }
+  .form-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+  :global(.dark) .form-message.error {
+    background: #7f1d1d;
+    color: #fee2e2;
+  }
+
+  /* @formspree/ajax styles */
+  [data-fs-success][data-fs-active] {
+    display: block !important;
+  }
+  [data-fs-error][data-fs-active] {
+    display: block !important;
+  }
 
 </style>
