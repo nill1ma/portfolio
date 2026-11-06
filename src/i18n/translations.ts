@@ -94,9 +94,9 @@ export const translations = {
     experience: {
       title: 'Experiencia',
       present: 'presente',
-      cit: 'Desarrollo y entrega de features de alto impacto en aplicaciones web complejas, del diseño a producción. Propuesta e implementación de mejoras técnicas de rendimiento y DX; mentoría de desarrolladores junior; facilitación de ceremonias ágiles en equipos cross-funcionales.',
+      cit: 'Desarrollo y entrega de funcionalidades de alto impacto en aplicaciones web complejas, del diseño a producción. Propuesta e implementación de mejoras técnicas de rendimiento y experiencia de desarrollo; mentoría de desarrolladores junior; facilitación de ceremonias ágiles en equipos transversales.',
       ntt: 'Desarrollo de funcionalidades frontend en un sistema corporativo de gestión de tickets, en un ambiente empresarial de gran escala con equipos ágiles distribuidos.',
-      thoughtworks: 'Soluciones frontend y fullstack para clientes de múltiples sectores en una de las principales consultoras de tecnología del mundo. Lideré sesiones internas de formación en JavaScript y React.js, realicé entrevistas técnicas y apoyé el onboarding de nuevos ingenieros. Monitoreo de incidentes en producción con Kibana.',
+      thoughtworks: 'Entregué soluciones frontend y fullstack para clientes de múltiples sectores en una de las principales consultoras de tecnología del mundo. Lideré sesiones internas de formación en JavaScript y React.js, realicé entrevistas técnicas y apoyé la incorporación de nuevos ingenieros. Monitoreé incidentes en producción con Kibana.',
       earlier: 'Anteriormente',
       earlierDesc: 'Capgemini, Accenture, FCamara, Solutis, Mazzatech, Iteris (2013–2021) — proyectos en Angular, Vue.js, PHP, Java Spring Boot y React, en sectores financiero, retail y sector público.',
     },
