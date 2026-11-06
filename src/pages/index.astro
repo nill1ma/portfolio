@@ -740,6 +740,17 @@ import ProjectCard from '../components/ProjectCard.astro';
     color: #fee2e2;
   }
 
+
+  /* loading state via @formspree/ajax */
+  [data-fs-loading] [data-fs-submit-btn] {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  [data-fs-loading] [data-fs-submit-btn]::after {
+    content: ' …';
+  }
+
   /* @formspree/ajax styles */
   [data-fs-success][data-fs-active] {
     display: block !important;
