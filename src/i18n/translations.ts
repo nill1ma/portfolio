@@ -39,7 +39,7 @@ export const translations = {
       send: 'Enviar mensagem',
       success: 'Mensagem enviada com sucesso!',
       error: 'Erro ao enviar mensagem. Tente novamente.',
-      alt: 'Ou direto pelo <a href="mailto:avanilson.limasantos@gmail.com">e-mail</a> ou <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener">LinkedIn</a>.',
+      alt: 'Ou direto pelo <a href="mailto:avanilson.limasantos@gmail.com">e-mail</a> ou <a href="https://www.linkedin.com/in/avanilson-santos" target="_blank" rel="noopener">LinkedIn</a>.',
     },
     cta: {
       title: 'Vamos trabalhar juntos?',
@@ -86,7 +86,7 @@ export const translations = {
       send: 'Send message',
       success: 'Message sent successfully!',
       error: 'Error sending message. Please try again.',
-      alt: 'Or directly via <a href="mailto:avanilson.limasantos@gmail.com">email</a> or <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener">LinkedIn</a>.',
+      alt: 'Or directly via <a href="mailto:avanilson.limasantos@gmail.com">email</a> or <a href="https://www.linkedin.com/in/avanilson-santos" target="_blank" rel="noopener">LinkedIn</a>.',
     },
     cta: {
       title: "Let's work together?",
@@ -133,7 +133,7 @@ export const translations = {
       send: 'Enviar mensaje',
       success: '¡Mensaje enviado con éxito!',
       error: 'Error al enviar mensaje. Intente nuevamente.',
-      alt: 'O directamente por <a href="mailto:avanilson.limasantos@gmail.com">email</a> o <a href="https://www.linkedin.com/in/avanilson-santos-88113768" target="_blank" rel="noopener">LinkedIn</a>.',
+      alt: 'O directamente por <a href="mailto:avanilson.limasantos@gmail.com">email</a> o <a href="https://www.linkedin.com/in/avanilson-santos" target="_blank" rel="noopener">LinkedIn</a>.',
     },
     cta: {
       title: '¿Vamos a trabajar juntos?',
