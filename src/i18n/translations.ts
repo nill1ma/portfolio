@@ -6,6 +6,9 @@ export const translations = {
     experience: {
       title: 'Experiência',
       present: 'presente',
+      periodCit: 'jan/2024 — presente',
+      periodNtt: 'out/2023 — jan/2024',
+      periodTw: 'mar/2021 — ago/2023',
       cit: 'Desenvolvimento e entrega de features em aplicações web complexas: formulários com validações avançadas (React Hook Form + Zod), approval flows, importação de XLSX e exportação de JSON para clone entre ambientes (SIT, UAT, produção). Diagnóstico e correção de travamento de aba em formulário com infinite scroll: individualização de instâncias do RHF por oferta (evitando revalidação global no onChange) e virtualização com TanStack Virtual; mentoria de 1 desenvolvedor pleno; facilitação de cerimônias ágeis em times cross-funcionais.',
       ntt: 'Desenvolvimento de features frontend em sistema corporativo de abertura de chamados, em ambiente enterprise de grande porte e times ágeis distribuídos. Acompanhamento de 1 estagiário durante o engajamento.',
       thoughtworks: 'Soluções frontend e fullstack para clientes de múltiplos setores em uma das principais consultorias de tecnologia do mundo. Liderança de treinamentos internos de JavaScript e React.js para turmas de ~17 profissionais, condução de mais de 10 entrevistas técnicas e apoio ao onboarding de novos engenheiros. Monitoramento de incidentes em produção com Kibana.',
@@ -50,6 +53,9 @@ export const translations = {
     experience: {
       title: 'Experience',
       present: 'present',
+      periodCit: 'Jan 2024 — present',
+      periodNtt: 'Oct 2023 — Jan 2024',
+      periodTw: 'Mar 2021 — Aug 2023',
       cit: 'Developed and shipped features across complex web applications: advanced-validation forms (React Hook Form + Zod), approval flows, XLSX import and JSON export for cross-environment cloning (SIT, UAT, production). Diagnosed and fixed a tab-freezing issue on a large infinite-scroll form: split into per-offer RHF instances (scoping onChange revalidation) and introduced TanStack Virtual for the product list. Mentored 1 mid-level developer; facilitated agile ceremonies in cross-functional teams.',
       ntt: 'Frontend development for a corporate ticket management system in a large enterprise environment, working within distributed agile teams. Supported 1 intern throughout the engagement.',
       thoughtworks: 'Frontend and fullstack solutions for clients across multiple industries at one of the world\'s leading tech consultancies. Led internal JavaScript and React.js training sessions for cohorts of ~17 professionals, conducted 10+ technical interviews, and supported onboarding of new engineers. Monitored production incidents using Kibana.',
@@ -58,7 +64,7 @@ export const translations = {
     },
     about: {
       title: 'About',
-      text: '10+ years building scalable web applications — currently at Ci&T, previously at ThoughtWorks and other leading consultancies across Brazil. Core stack in React, TypeScript and Next.js, with a focus on quality: good test coverage, clean code, and clear communication with product and design teams.\n\nBeyond delivery, I\'ve mentored developers transitioning into tech, led technical interviews, and facilitated agile ceremonies. Currently open to remote opportunities in Brazil and abroad.',
+      text: '10+ years building scalable web applications — currently at Ci&T, previously at ThoughtWorks and other leading consultancies across Brazil. Core stack in React, TypeScript and Next.js, with a focus on quality: good test coverage, clean code, and clear communication with product and design teams.\n\nBeyond delivery, I\'ve mentored developers transitioning into tech, led technical interviews, and facilitated agile ceremonies. Open to remote opportunities worldwide.',
     },
     projects: {
       title: 'Projects',
@@ -73,7 +79,7 @@ export const translations = {
     },
     contact: {
       title: "Let's talk?",
-      subtitle: 'Open to remote opportunities in Brazil and abroad.',
+      subtitle: 'Open to remote opportunities worldwide.',
       namePlaceholder: 'Your name',
       emailPlaceholder: 'Your email',
       messagePlaceholder: 'Message',
@@ -94,6 +100,9 @@ export const translations = {
     experience: {
       title: 'Experiencia',
       present: 'presente',
+      periodCit: 'ene/2024 — presente',
+      periodNtt: 'oct/2023 — ene/2024',
+      periodTw: 'mar/2021 — ago/2023',
       cit: 'Desarrollo y entrega de funcionalidades en aplicaciones web complejas: formularios con validaciones avanzadas (React Hook Form + Zod), flujos de aprobación, importación de XLSX y exportación de JSON para clonación entre ambientes (SIT, UAT, producción). Diagnóstico y corrección de congelamiento de pestaña en formulario con scroll infinito: instancias individuales de RHF por oferta (evitando revalidación global en onChange) y virtualización con TanStack Virtual. Mentoría de 1 desarrollador semi-sénior; facilitación de ceremonias ágiles en equipos transversales.',
       ntt: 'Desarrollo de funcionalidades frontend en un sistema corporativo de gestión de tickets, en un ambiente empresarial de gran escala con equipos ágiles distribuidos. Acompañamiento de 1 practicante durante el proyecto.',
       thoughtworks: 'Entregué soluciones frontend y fullstack para clientes de múltiples sectores en una de las principales consultoras de tecnología del mundo. Lideré sesiones internas de formación en JavaScript y React.js para grupos de ~17 profesionales, realicé más de 10 entrevistas técnicas y apoyé la incorporación de nuevos ingenieros. Monitoreé incidentes en producción con Kibana.',

@@ -14,11 +14,12 @@
       <a href="#cta" class="nav-link nav-link--cta" data-i18n="nav.cta">Vamos trabalhar juntos?</a>
 
       <div class="lang-switcher">
-        <button class="lang-btn" data-lang="pt" aria-label="Mudar idioma para Português">PT</button>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <button class="lang-btn" data-lang="pt" aria-label="Mudar idioma para Português" title="Português">PT</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-        <button class="lang-btn" data-lang="en" aria-label="Switch language to English">EN</button>
+        <button class="lang-btn" data-lang="en" aria-label="Switch language to English" title="English">EN</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-        <button class="lang-btn" data-lang="es" aria-label="Cambiar idioma a Español">ES</button>
+        <button class="lang-btn" data-lang="es" aria-label="Cambiar idioma a Español" title="Español">ES</button>
       </div>
 
       <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema" aria-pressed="false">
@@ -30,11 +31,12 @@
     <!-- Mobile controls bar -->
     <div class="mobile-controls">
       <div class="lang-switcher">
-        <button class="lang-btn" data-lang="pt" aria-label="Mudar idioma para Português">PT</button>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <button class="lang-btn" data-lang="pt" aria-label="Mudar idioma para Português" title="Português">PT</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-        <button class="lang-btn" data-lang="en" aria-label="Switch language to English">EN</button>
+        <button class="lang-btn" data-lang="en" aria-label="Switch language to English" title="English">EN</button>
         <span class="lang-divider" aria-hidden="true">|</span>
-        <button class="lang-btn" data-lang="es" aria-label="Cambiar idioma a Español">ES</button>
+        <button class="lang-btn" data-lang="es" aria-label="Cambiar idioma a Español" title="Español">ES</button>
       </div>
 
       <button id="pwa-install-btn" class="pwa-btn hidden" aria-label="Instalar app">
@@ -86,7 +88,7 @@
   applyThemeToggle('theme-toggle-mobile');
 
   // Idioma
-  const savedLang = (localStorage.getItem('lang') ?? 'pt') as Language;
+  const savedLang = (localStorage.getItem('lang') ?? 'en') as Language;
   applyLanguage(savedLang);
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -264,15 +266,17 @@
   :global(.dark) .icon-moon { @apply block; }
 
   .lang-switcher { @apply flex items-center gap-1; }
+  .lang-switcher > svg { @apply text-zinc-600; }
+  :global(.dark) .lang-switcher > svg { @apply text-zinc-300; }
   .lang-divider { @apply text-zinc-300 text-xs; }
   :global(.dark) .lang-divider { @apply text-zinc-700; }
 
   .lang-btn {
-    @apply text-xs bg-transparent border-0 cursor-pointer text-zinc-400 transition-colors hover:text-zinc-900 p-0;
+    @apply text-xs bg-transparent border-0 cursor-pointer text-zinc-600 transition-colors hover:text-zinc-900 p-0;
   }
-  :global(.dark) .lang-btn { @apply text-zinc-600 hover:text-white; }
-  .lang-btn--active { @apply text-zinc-900 font-semibold; }
-  :global(.dark) .lang-btn--active { @apply text-white; }
+  :global(.dark) .lang-btn { @apply text-zinc-300 hover:text-white; }
+  .lang-btn--active { @apply text-zinc-900 font-semibold bg-zinc-100 rounded px-1; }
+  :global(.dark) .lang-btn--active { @apply text-white bg-zinc-700 rounded px-1; }
 
   .pwa-btn {
     @apply flex items-center gap-1.5 text-xs bg-transparent border border-zinc-300 rounded-full px-3 py-1.5 cursor-pointer text-zinc-700 transition-colors hover:border-zinc-900 hover:text-zinc-900;
