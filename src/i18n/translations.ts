@@ -25,6 +25,7 @@ export const translations = {
       cyclehabits: { description: 'PWA de hábitos diários instalável como app mobile. Cadastre hábitos com tipo, horário e lembretes via push notification (OneSignal). Roda no browser e instalado como app — sem loja de aplicativos.' },
       awakeui: { description: 'Design system próprio publicado no npm com Storybook detalhado (.mdx + .stories). 23 componentes, 21 versões publicadas — base de todos os projetos do portfólio (monthctrl, cyclehabits e awakr).' },
       awakr: { description: 'Plataforma multi-tenant para sites de pequenos negócios: vitrine, cardápio, eventos e promoções. CMS headless (Sanity), domínio próprio, PWA e deploy via Cloudflare Pages. Demonstra CMS + multi-tenant + performance de borda.' },
+      adopet: { description: 'Plataforma de adoção de animais que conecta quem quer doar um pet a quem quer adotar. Anúncios com fotos, espécie, raça, porte e localização, status disponível → reservado → adotado e pedidos de adoção com mensagem e resposta do dono. Monorepo com front Astro SSR + React e API Hono no edge (Cloudflare Workers, D1, R2), login com e-mail ou Google (better-auth), e-mails transacionais (Resend), cron que limpa anúncios adotados e interface em 4 idiomas com dark mode.' },
     },
     card: {
       github: 'GitHub',
@@ -72,6 +73,7 @@ export const translations = {
       cyclehabits: { description: 'Daily habits PWA installable as a mobile app. Add habits with type, schedule and reminders via push notification (OneSignal). Works in the browser and installed as an app — no app store needed.' },
       awakeui: { description: 'Own design system published on npm with detailed Storybook (.mdx + .stories). 23 components, 21 published versions — foundation for all portfolio projects (monthctrl, cyclehabits and awakr).' },
       awakr: { description: 'Multi-tenant platform for small business websites: storefronts, menus, events and promotions. Headless CMS (Sanity), custom domain, PWA and deploy via Cloudflare Pages. Showcases CMS, multi-tenant and edge performance.' },
+      adopet: { description: 'Pet adoption platform connecting people who want to rehome a pet with people who want to adopt. Listings with photos, species, breed, size and location, available → reserved → adopted status, and adoption requests with a message and the owner\'s response. Monorepo with an Astro SSR + React frontend and a Hono API on the edge (Cloudflare Workers, D1, R2), email or Google sign-in (better-auth), transactional emails (Resend), a cron job that cleans up adopted listings, and a UI in 4 languages with dark mode.' },
     },
     card: {
       github: 'GitHub',
@@ -119,6 +121,7 @@ export const translations = {
       cyclehabits: { description: 'PWA de hábitos diarios instalable como app móvil. Registra hábitos con tipo, horario y recordatorios vía push notification (OneSignal). Funciona en el navegador e instalada como app — sin tienda de aplicaciones.' },
       awakeui: { description: 'Design system propio publicado en npm con Storybook detallado (.mdx + .stories). 23 componentes, 21 versiones publicadas — base de todos los proyectos del portafolio (monthctrl, cyclehabits y awakr).' },
       awakr: { description: 'Plataforma multi-tenant para sitios web de pequeños negocios: vitrina, menú, eventos y promociones. CMS headless (Sanity), dominio propio, PWA y deploy vía Cloudflare Pages. Demuestra CMS, multi-tenant y rendimiento en edge.' },
+      adopet: { description: 'Plataforma de adopción de animales que conecta a quien quiere dar un pet en adopción con quien quiere adoptar. Anuncios con fotos, especie, raza, tamaño y ubicación, estado disponible → reservado → adoptado y solicitudes de adopción con mensaje y respuesta del dueño. Monorepo con frontend Astro SSR + React y API Hono en el edge (Cloudflare Workers, D1, R2), inicio de sesión con email o Google (better-auth), emails transaccionales (Resend), un cron que limpia anuncios adoptados e interfaz en 4 idiomas con dark mode.' },
     },
     card: {
       github: 'GitHub',
